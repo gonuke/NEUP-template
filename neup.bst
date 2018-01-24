@@ -1,5 +1,5 @@
 %%
-%% This is file `narrative.bst',
+%% This is file `neup.bst',
 %% generated with the docstrip utility.
 %%
 %% The original source files were:
