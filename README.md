@@ -12,6 +12,9 @@ A LaTeX template for NEUP proposals
 3. Run the makefile: `make bib; make`
 4. Files should be in the `submission` folder
 
+## Collaboration
+All suggestions and improvements are welcome, whether by issue or by pull request.
+
 ## Manifest
 
 This package contains template LaTeX files to generate the following 4 files
