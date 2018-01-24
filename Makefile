@@ -1,6 +1,9 @@
 foa_id=2018-CFA
-project_id=15645
+project_id=1234
 submit_dir=submission
+
+# add a filename to this if you are using acronyms
+acronyms=
 
 narrative=${submit_dir}/${foa_id}-Technical-Narrative-${project_id}.pdf
 abstract=${submit_dir}/${foa_id}-Technical-Abstract-${project_id}.pdf
@@ -12,23 +15,23 @@ all: ${narrative} ${abstract} ${benefits_of_collaboration} ${capabilities}
 ${submit_dir}:
 	mkdir ${submit_dir}
 
-${abstract}: include/defs.tex abstract.tex
+${abstract}: project-data.tex abstract.tex ${acronyms}
 	pdflatex abstract.tex
 	pdflatex abstract.tex
 	mv abstract.pdf $@
 
-${capabilities}: include/defs.tex capabilities.tex
+${capabilities}: project-data.tex capabilities.tex ${acronyms}
 	pdflatex capabilities.tex
 	pdflatex capabilities.tex
 	mv capabilities.pdf $@
 
-${narrative}: include/acronyms.tex include/defs.tex narrative.tex narrative.bib
+${narrative}: project-data.tex narrative.tex narrative.bib ${acronyms}
 	pdflatex narrative.tex
 	pdflatex narrative.tex
 	pdflatex narrative.tex
 	mv narrative.pdf $@
 
-${benefits_of_collaboration}: include/defs.tex benefits_of_collaboration.tex 
+${benefits_of_collaboration}: project-data.tex benefits_of_collaboration.tex ${acronyms}
 	pdflatex benefits_of_collaboration.tex
 	pdflatex benefits_of_collaboration.tex
 	mv benefits_of_collaboration.pdf $@
