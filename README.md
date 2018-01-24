@@ -37,3 +37,5 @@ template:
 * neup.sty : style file for NEUP format
 * neup.bst : bibliography style file
 * neup_logo.png : NEUP logo
+* README.md : this file
+
