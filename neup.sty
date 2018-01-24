@@ -1,0 +1,54 @@
+\RequirePackage{fancyhdr}
+
+% 1 in marchins as specificed by FOA
+\usepackage[margin=1in]{geometry}
+
+%% Common packages that may be convenient
+% use the graphicx to enable importing graphics
+\usepackage[pdftex]{graphicx}
+\usepackage{tabularx}  % enables extra table formatting
+\usepackage{multirow}  % enables multirow entries in tables
+\usepackage[pdftex]{xcolor}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage{url}
+\usepackage{todonotes}
+
+% enable automatic acronym expansion on first use
+\usepackage[acronyms]{glossaries}  
+
+% package options for a fancy header and footer
+\pagestyle{fancy}
+\fancyhf{}
+\lfoot{\FOA{} \docname{} \ID }
+\rfoot{Page \thepage\ of \pageref{LastPage}}
+
+\newcommand{\doctitle}{
+\begin{centering}
+  \docname{} for \FOANUM\\
+  \textbf{\large \mytitle}\\
+  \FOA{} \docname{} \ID\\
+\end{centering}
+\vspace{1em}
+}
+
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.5pt}
+
+\makeatletter
+\renewcommand\section{\@startsection {section}{1}{\z@}%
+                                   {-2.0ex \@plus -1ex \@minus -.2ex}%
+                                   {0.5ex \@plus.2ex}%
+                                   {\normalfont\bfseries}}% from \Large
+\renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
+                                     {-2.0ex\@plus -1ex \@minus -.2ex}%
+                                     {0.5ex \@plus .2ex}%
+                                     {\normalfont\bfseries}}% from \large
+\renewcommand\subsubsection{\@startsection{subsubsection}{3}{\z@}%
+                                     {-2.0ex\@plus -1ex \@minus -.2ex}%
+                                     {0.5ex \@plus .2ex}%
+                                     {\normalfont\bfseries}}% from \normalsize
+\makeatother
+
+
+\input{project-data}

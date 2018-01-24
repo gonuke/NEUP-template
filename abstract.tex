@@ -1,0 +1,45 @@
+\documentclass[dvips,12pt]{article}
+
+\usepackage{neup}
+\newcommand{\docname}{Technical Abstract}
+
+% \input{include/acronyms}  % often useful to store acronyms in another file
+
+% Special header/footer for abstract
+\chead{\includegraphics[width=2in]{neup_logo.png}} % place the NEUP logo at the top of the page
+\renewcommand{\footrulewidth}{0pt}
+\lfoot{}
+\rfoot{}
+
+%----------------------------------------------------------------------------------------
+%	DOCUMENT INFORMATION
+%----------------------------------------------------------------------------------------
+\begin{document}
+\vspace*{0.5in}
+
+\noindent\rule{\textwidth}{1pt}\
+
+\vspace*{0.2in}
+
+\begin{centering}
+  \textbf{\large \mytitle}\\
+\end{centering}
+
+\vspace*{0.25in}
+
+\noindent
+\begin{tabularx}{\textwidth}{rlrl}
+   \textbf{PI:} & \PI\\
+   \textbf{Program:} & \program
+\end{tabularx}
+
+
+\vspace{0.2in}
+\noindent\rule{\textwidth}{1pt}\\
+
+\noindent\textbf{Abstract:} 
+
+%% ABSTRACT TEXT HERE %%
+
+
+\end{document}
