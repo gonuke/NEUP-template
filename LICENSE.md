@@ -1,7 +1,4 @@
-*******
-LICENSE
-*******
-::
+# LICENSE
 
     Copyright (c) 2010-2018, University of Wisconsin Computational Nuclear
        Engineering Research Group
